@@ -24,4 +24,9 @@ describe ('Player', () => {
     const playerRoll = new Player('player', true, [], 0)
     expect(playerRoll.diceRoll(1)).toBeUndefined();
   });
+
+  test('should correctly add the roundScore', () => {
+    const playerRoll = new Player('player', true, [4,6,7], 0)
+    expect(playerRoll.hold()).toEqual(17);
+  });
 });
