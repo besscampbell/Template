@@ -33,8 +33,8 @@ Player.prototype.diceRoll = function(number){
 Player.prototype.hold = function() {
   if (this.roundScore[0] != 0) {
     const add = (a, b) => a+b;
-    // this.totalScore = this.totalScore + 
-    return this.roundScore.reduce(add);
+    this.totalScore = this.totalScore + this.roundScore.reduce(add);
+    return this.totalScore
   //   this.roundScore = [];
   //   player1.turn= !player1.turn
   //   player2.turn= !player2.turn

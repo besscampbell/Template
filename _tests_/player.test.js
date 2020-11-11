@@ -29,4 +29,9 @@ describe ('Player', () => {
     const playerRoll = new Player('player', true, [4,6,7], 0)
     expect(playerRoll.hold()).toEqual(17);
   });
+
+  test('should add roundScore to totalScore', () => {
+    const playerRoll = new Player('player', true, [2, 3, 4], 10)
+    expect(playerRoll.hold()).toEqual(19);
+  });
 });
